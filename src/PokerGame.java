@@ -241,8 +241,8 @@ public class PokerGame
     public void playAgain()
     {
         Scanner sc=new Scanner(System.in);
-        String playAgain= String.valueOf('y');
-        boolean again=false;
+        String playAgain= "y";
+        boolean again;
 
         //loop that lets user play again
         do
