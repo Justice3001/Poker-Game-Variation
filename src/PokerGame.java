@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class PokerGame
 {
@@ -236,38 +235,6 @@ public class PokerGame
         } else {
             System.out.println("It's a tie!");
         }
-    }
-
-    public void playAgain()
-    {
-        Scanner sc=new Scanner(System.in);
-        String playAgain= "y";
-        boolean again;
-
-        //loop that lets user play again
-        do
-        {
-            PokerGame game = new PokerGame();
-            game.dealHands();
-            game.displayHands();
-            game.determineWinner();
-
-            System.out.print("Want to play again? (y/n)");
-            playAgain = sc.nextLine();
-
-            //user input validation
-            if (playAgain.equalsIgnoreCase("y")) {
-                again = true;
-            } else if (playAgain.equalsIgnoreCase("n")) {
-                System.out.println("Okay, bye! Thanks for playing.");
-                again = false;
-            } else {
-                System.out.println("Invalid input. Please enter 'y' or 'n'.");
-                again = true;
-            }
-        } while (again);
-
-        sc.close();
     }
 
 
